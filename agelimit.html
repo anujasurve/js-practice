@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+
+        <p>Enter some text in the fields below, and then press the "Submit form" button to submit the form.</p>
+
+        <form id="myForm" action="/action_page.php">
+          girl_age: <input id="g" type="text" name="fname"><br>
+          boy_age: <input id = "b" type="text" name="lname"><br><br>
+          <button onclick="myFunction()"> try it </button>
+          
+        </form>
+
+        <script>
+            function myFunction() {
+              let x = document.getElementById("g").value;
+              let y = document.getElementById("b").value;
+
+                if(x>=18 && y>=21){
+                    alert("both are eligible");
+                }
+                if(x>18 && y<21){
+                    alert("boy is not eligible")
+                }
+                if(x<18 && y>21){
+                    alert("girl is not eligible")
+                }
+                else{
+                    alert("not eligible");
+                }
+            }
+        </script>
+
+    </body>
+</html>
