@@ -55,3 +55,26 @@ const ampm = s.slice(-2);
 console.log(time)
 }
 
+//Given a number , for each integer i in the range from i to n  inclusive, print one value per line as follows:
+//if i  is a multiple of both 3 and 5 return "FizzBuzz"
+//if i  is a multiple of 3 but not 5 print "Fizz"
+//if i  is a multiple of 5 but not 3 print "Buzz"
+//if i is not a multiple of 3 or 5 print value of i
+
+function check(n){
+    for (let i=1; i<=15; i++){
+        if((i%3 == 0) && (i%5 == 0)){
+            console.log('FizzBuzz')
+        }
+        if((i%3 == 0) && (i%5 != 0)){
+            console.log('Fizz')
+        }
+        if((i%3 != 0) && (i%5 == 0)){
+            console.log('Buzz')
+        }
+        if((i%3 != 0) && (i%5 != 0)){
+            console.log(i)
+        }
+    }
+}
+console.log(check(15));
