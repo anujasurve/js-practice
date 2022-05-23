@@ -125,3 +125,18 @@ function flippingmatrix(matrix){
     return total
 }
 console.log(flippingmatrix([[112, 42, 83, 119],[56, 125, 56, 49],[15, 78, 101, 43],[62, 98, 114, 10]]));
+
+
+    
+//Transform array into zigzag
+
+function transform(array){
+    let arr = array.sort();
+    let length = arr.length;
+    let firstPart = arr.slice(0,length/2);
+    let lastpart = (arr.slice(length/2,length-1)).reverse();
+    let middlepart = arr.slice(length-1,length);
+    let final = firstPart.concat(middlepart).concat(lastpart)
+    return final;
+}
+console.log(transform([1,5,6,2,3,4,7]))
