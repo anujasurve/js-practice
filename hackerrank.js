@@ -139,4 +139,28 @@ function transform(array){
     let final = firstPart.concat(middlepart).concat(lastpart)
     return final;
 }
-console.log(transform([1,5,6,2,3,4,7]))
+console.log(transform([1,5,6,2,3,4,7]));
+
+
+
+//  * Complete the 'caesarCipher' function below.
+//  *
+//  * The function is expected to return a STRING.
+//  * The function accepts following parameters:
+//  *  1. STRING s
+//  *  2. INTEGER k
+
+function cipherRot3(str,n) {
+  //str = str.toUpperCase();
+  return str.replace(/[a-z]/g, rot3);
+
+  function rot3(correspondance) {
+    const charCode = correspondance.charCodeAt();
+    //A = 90, Z = 122
+    return String.fromCharCode(
+            ((charCode + n) <= 122) ? charCode + n
+                                    : (charCode + n) % 122 + 90
+           );
+  }
+}
+console.log(cipherRot3("anuja-Ahgh",3))
