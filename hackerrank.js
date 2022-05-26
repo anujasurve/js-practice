@@ -164,3 +164,27 @@ function cipherRot3(str,n) {
   }
 }
 console.log(cipherRot3("anuja-Ahgh",3))
+
+//or this ans
+
+function cipherRot3(s,k) {
+if(k > 26){
+   var j=k%26-1;
+  }
+  //str = str.toUpperCase();
+  return s.replace(/[A-Z a-z]/g, rot3);
+  
+ 
+
+  function rot3(correspondance) {
+    const charCode = correspondance.charCodeAt();
+    //A = 90, Z = 122 okffng-Qwvb
+    if(charCode <= 90){
+    	return String.fromCharCode(((charCode + j) <= 90) ? charCode + j : (charCode + j) % 90 + 64);
+    }
+    if(charCode <= 122){
+    	return String.fromCharCode(((charCode + j) <= 122) ? charCode + j : (charCode + j) % 122 + 97);
+    }
+  }
+}
+document.write(cipherRot3("www.abc.xy",87));
